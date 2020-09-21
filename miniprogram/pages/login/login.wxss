@@ -1,0 +1,23 @@
+/* pages/login/login.wxss */
+.content{
+  margin-top: 40px;
+}
+.account{
+   display: flex;
+   flex-direction: row;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   margin: 0px auto;
+   margin-bottom: 5px;
+   width: 90%;
+   border: 1px solid #000000;
+}
+.title{
+  padding: 0px 1rem;
+  font-weight: bold;
+}
+.btn{
+  width: 90%;
+  margin-top:40px;
+  color: #999999;
+}

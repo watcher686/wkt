@@ -1,0 +1,18 @@
+/* pages/news/news.wxss */
+.courseChapter{
+  padding:20rpx 10rpx;
+}
+.courseChapter text{
+  font-size:1.5rem;
+  color: #6f6f6f;
+  margin-left: 5px;
+	padding-left: 5px;
+	border-left: 5px solid #5495e6;
+}
+.textareaclass{
+  font-size: 1.2rem;
+  width: 90%;
+  border: 1px solid black;
+  padding: 15rpx 20rpx;
+  margin: 10rpx 15rpx;
+}

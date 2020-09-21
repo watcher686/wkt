@@ -1,0 +1,90 @@
+<!--pages/zjkt/zjkt.wxml-->
+<!-- 章节课程 -->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">课件</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">视频</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">测试</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">
+  <swiper-item>
+    <scroll-view class="layout-lists carefully-selected-content" scroll-y>
+      <view wx:if="{{kclists.length>0}}">
+        <block wx:for="{{kclists}}" wx:key="index" wx:for-index="kcindex">
+          <block wx:for="{{item.courseware}}" wx:for-item="file" wx:key="index">
+            <view data-url="{{file}}" bindtap="downloadFile" class="fileview">
+              <text class="text">课件{{kcindex+1}}-{{index+1}}</text>
+            </view>
+          </block>
+        </block>
+      </view>
+      <view wx:else>
+        <text>暂时没有课件哦~~</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+
+  <swiper-item>
+    <scroll-view class="layout-lists carefully-selected-content" scroll-y>
+      <view wx:if="{{kclists.length>0}}">
+        <block wx:for="{{kclists}}" wx:key="index" wx:for-index="kcindex">
+          <block wx:for="{{item.video}}" wx:for-item="video" wx:key="index">
+            <text class="videotext">视频{{kcindex+1}}-{{index+1}}</text>
+            <video style="width: 100%;" id="video{{kcindex+1}}-{{index+1}}" src="{{video}}" bindtap="video_play"></video>
+          </block>
+        </block>
+      </view>
+      <view wx:else>
+        <text>暂时没有视频哦~~</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+
+  <swiper-item>
+    <scroll-view class="layout-lists carefully-selected-content" scroll-y>
+      <view wx:if="{{questionList.length>0}}">
+        <view class="page">
+          <!--标题-->
+          <view class='page__hd'>
+            <view class="page__title">
+              {{index+1}}、{{questionList[index].question}} {{questionList[index].type==1||questionList[index].type==3?"【单选/判断】":"【多选】"}} （{{questionList[index].scores}}分）
+            </view>
+          </view>
+          <!--内容-->
+          <view class="page__bd">
+            <!-- 单选 -->
+            <radio-group class="radio-group" bindchange="radioChange" wx:if="{{questionList[index].type == 1}}">
+              <label class="radio my-choosebox" wx:for="{{questionList[index].option}}" wx:for-index="key" wx:for-item="value">
+                <radio value="{{key}}" checked="{{questionList[index].checked}}" />{{key}}、{{value}}
+              </label>
+            </radio-group>
+            <!-- 多选 -->
+            <checkbox-group bindchange="checkboxChange" wx:elif="{{questionList[index].type == 2}}">
+              <label class="checkbox my-choosebox" wx:for="{{questionList[index].option}}" wx:for-index="key" wx:for-item="value">
+                <checkbox value="{{key}}" checked="{{questionList[index].checked}}" />{{key}}、{{value}}
+              </label>
+            </checkbox-group>
+            <radio-group class="radio-group" bindchange="radioChange" wx:else>
+              <label class="radio my-choosebox" wx:for="{{questionList[index].option}}">
+                <radio value="{{item}}" checked="{{questionList[index].checked}}" />{{item}}
+              </label>
+            </radio-group>
+          </view>
+          <!--按钮-->
+          <view class='page_ft'>
+            <view class='mybutton'>
+              <button bindtap='nextSubmit' wx:if="{{index == questionList.length-1}}">提交</button>
+              <button bindtap='nextSubmit' type="primary" wx:else>下一题</button>
+              <text bindtap='outTest' class="toindex-btn">退出答题</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <text>暂时没有测试哦~~</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

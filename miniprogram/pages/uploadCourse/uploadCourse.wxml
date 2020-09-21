@@ -1,0 +1,21 @@
+<!--pages/uploadCourse/uploadCourse.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='list'>
+    <view class='courseChapter'>
+      <text>课程章节</text>
+    </view>
+    <view class='chapter'>
+      <input class="zjInput" name="input-content" type="text" placeholder="输入你要上传的章节编号,如1.1" placeholder-class="holder" value="{{textContent}}" bindinput='getTextAreaContent'></input>
+    </view>
+    <view class="hr"></view>
+    <view class='courseChapter'>
+      <text>课程内容</text>
+    </view>
+    <view class='courseware'>
+      <button type="primary" size="mini" bindtap="uploadFile">上传课件到云存储</button>
+      <button type="primary" size="mini" bindtap="uploadvideo">上传视频到云存储</button>
+    </view>
+  </view>
+<view class="hr"></view>
+  <button form-type='submit'  class="submit">更新数据</button>
+</form>

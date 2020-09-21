@@ -1,0 +1,10 @@
+<!--pages/news/news.wxml-->
+<view class='chapter'>
+  <view class='courseChapter'>
+    <text>请输入公告</text>
+  </view>
+  <view class="section">
+    <textarea class="textareaclass" bindinput="bindTextAreaInput" value="{{newslists[0].title}}" auto-height auto-focus/>
+  </view>
+  <button type="primary" bindtap="update">修改公告</button>
+</view>

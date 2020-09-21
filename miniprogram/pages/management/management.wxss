@@ -1,0 +1,21 @@
+/* pages/management/management.wxss */
+.content {
+  background-color: #f4f4f4;
+  height: 500px;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  height: 50px;
+  align-items: center;
+}
+.line {
+  height: 10px;
+}
+
+.hr {
+  height: 1px;
+  background-color: #ccc;
+  opacity: 0.2;
+}

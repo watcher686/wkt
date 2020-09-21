@@ -1,0 +1,9 @@
+<!--pages/jswd/jswd.wxml-->
+<!-- 技术文档 -->
+<!-- <button type="primary" bindtap="uploadFile">上传文档</button> -->
+<view>
+<view class="Catalog">技术文档目录</view>
+<block wx:for="{{filelists}}" wx:for-item="file" wx:for-index="index" wx:key="index">
+  <view data-url="{{file.fileUrl}}" class="fileview" bindtap="downloadFile"><text class="text">{{index+1}}</text>{{file.filename}}</view>
+</block>
+</view>

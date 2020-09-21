@@ -1,0 +1,86 @@
+/* pages/zjkt/zjkt.wxss */
+view{
+  font-size: 1.5rem;
+}
+.swiper-tab {
+	width: 100%;
+	text-align: center;
+  height: 80rpx;
+	line-height: 80rpx;
+  position: fixed;
+  top: 0;
+  z-index:2;
+  background: white;
+}
+
+.layout-lists {
+    height: 100%;
+    box-sizing:border-box;
+}
+
+
+.swiper-tab-list {
+	font-size: 30rpx;
+	display: inline-block;
+	width: 33.3%;
+	color: #5495e6;
+}
+
+.on {
+	color: #ffaa00;
+}
+
+.swiper-box {
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+  margin-top: 80rpx;
+}
+/***************/
+/*test*/
+/* .test-box{
+	margin: 10px;
+	border: 1px solid #666;
+} */
+.page {
+  padding: 20rpx;
+}
+.page__bd {
+  padding: 20rpx;
+}
+.my-choosebox {
+  display: block;
+  margin-bottom: 20rpx;
+}
+.toindex-btn {
+  margin-top: 20rpx;
+  display:inline-block;
+  line-height:2.3;
+  font-size:13px;
+  padding:0 1.34em;
+  color:#576b95;
+  text-decoration:underline;
+  float: right;
+}
+/*课件*/
+.fileview{
+  display: block;
+  padding: 0.5rem 0px;
+}
+.text{
+	background-color: #5495e6;
+	color: white;
+  padding:20rpx;
+	border-radius: 50%;
+	font-size: 1.2rem;
+	margin: 5px;
+}
+/*视频*/
+.videotext{
+  display: block;
+  padding: 10rpx 0rpx 10rpx 10rpx;
+  margin: 10rpx 0rpx;
+  font-size: 1.2rem;
+  color: #5495e6;
+}

@@ -1,0 +1,101 @@
+/* pages/kejian/kejian.wxss */
+/*轮播图指示点*/
+/*.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal{
+     margin-bottom: 2rpx;
+}
+.swiper-box .wx-swiper-dot{
+    width:40rpx;
+    display: inline-flex;
+    height: 10rpx;
+    margin-left: 20rpx;
+    justify-content:space-between;
+}
+.swiper-box .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 8rpx
+}
+.swiper-box .wx-swiper-dot-active::before{
+    background:rgba(74, 132, 203, 255);   
+}*/
+/************************************************/
+/*消息栏*/
+.notice {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 10rpx 25rpx;
+  background: #f1f1f1;
+}
+.content-box {
+  overflow: hidden;
+  width:700rpx;
+}
+.content-text {
+  color: #a30707;
+  white-space: nowrap;
+  font-size: 28rpx;
+}
+/************************************************/
+view{
+  font-size: 1.2rem;
+}
+/* 登录注册box*/
+.dlzc{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 5px 0px;
+	border-bottom: 1px solid #e3e3e3;
+}
+/*登录注册*/
+.dlzc .dl{
+	display: block;
+	color: white;
+	width: 49%;
+	text-align: center;
+	padding: 10px 0px;
+	border-radius: 10px;
+}
+.dlzc .dl{/* 登录 */
+	background-color: #ffaa00;
+}
+
+.dlzc .zc{/* 注册 */
+	/* background-color: #5495e6; */
+}
+.dlzc .dl>view:nth-of-type(1),.dlzc .zc>view:nth-of-type(1){
+	font-weight: bold;
+	font-size: 1em;
+}
+.dlzc .dl>view:nth-of-type(2),.dlzc .zc>view:nth-of-type(2){
+	font-size: 0.7em;
+}
+/********************************/
+/*课程章节*/
+.kczj{
+	margin: 5px 0px;
+}
+.kczj>view:nth-of-type(1){
+	margin-left: 5px;
+	padding-left: 5px;
+	border-left: 5px solid #5495e6;
+}
+.zjbt{
+	margin: 0.5rem 0.5rem;
+	padding: 0.5rem 0px;
+	border-bottom: 1px dashed #666;
+}
+.text{
+	background-color: #5495e6;
+	color: white;
+	padding:0.3rem 0.5rem;
+	border-radius: 50%;
+	font-size: 0.5rem;
+	margin: 5px;
+}
+.ktclass{
+	margin-left: 3rem;
+}
+

@@ -1,0 +1,25 @@
+<!--pages/management/management.wxml-->
+<!-- 后台管理 -->
+<view class='content'>
+
+  <!-- <view class='item'>
+    <button type="primary" bindtap="uploadCourse">上传课件和视频</button>
+  </view>
+  <view class='line'></view> -->
+
+  <!-- <view class='item'>
+    <button type="primary" bindtap="uploadkejian">上传课程章节</button>
+  </view>
+  <view class='line'></view> -->
+
+  <view class='hr'></view>
+  <view class='item'>
+      <button type="primary" bindtap="uploadFile">上传技术文档</button>
+  </view>
+  <view class='line'></view>
+
+  <view class='hr'></view>
+  <view class='item'>
+      <button type="primary" bindtap="news">发布公告</button>
+  </view>
+</view>

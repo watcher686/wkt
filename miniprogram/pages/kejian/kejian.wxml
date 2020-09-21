@@ -1,0 +1,31 @@
+<!--pages/kejian/kejian.wxml-->
+<!-- 课件 -->
+<view class="wktkj">
+  <image src="{{imgs}}" style="width: 100%;height: 250px;"></image>
+  <view class="dlzc">
+    <view class='notice'>
+      <view class="left">
+        <view class="left-box">
+          <view class='content-box'>
+            <view class='content-text' animation="{{animationData}}">
+              <text id="text">{{text}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="kczj">
+    <view>课程章节</view>
+    <block wx:for="{{kjlists}}" wx:for-item="kj" wx:for-index="zjindex" wx:key="index">
+      <view class="zjbt">
+        <text class="text">{{zjindex+1}}</text>{{kj.chapter}}</view>
+      <block wx:for="{{kj.title}}" wx:for-item="kt" wx:key="index">
+        <view>
+          <view bindtap='onItemClick' data-ktindex='{{zjindex+1}}.{{index+1}}' class="ktclass">{{zjindex+1}}.{{index+1}} {{kt}}</view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>

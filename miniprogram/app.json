@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/start/start",
+
+    "pages/kejian/kejian",
+    "pages/zjkt/zjkt",
+    "pages/jswd/jswd",
+    "pages/results/results",
+    
+    "pages/publish/publish",
+    "pages/home/home",
+    "pages/homeDetail/homeDetail",
+    "pages/replay/replay",
+
+    "pages/index/index",
+    "pages/history/history",
+
+    "pages/login/login",
+    "pages/uploadCourse/uploadCourse",
+    "pages/management/management",
+    "pages/news/news"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5495e6",
+    "navigationBarTitleText": "微课堂",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#5495e6",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/kejian/kejian",
+        "text": "课程章节",
+        "iconPath": "images/tab/kejian2.png",
+        "selectedIconPath": "images/tab/kejian1.png"
+      },
+      {
+        "pagePath": "pages/jswd/jswd",
+        "text": "技术文档",
+        "iconPath": "images/tab/jswd2.png",
+        "selectedIconPath": "images/tab/jswd1.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "讨论中心",
+        "iconPath": "images/tab/shequ2.png",
+        "selectedIconPath": "images/tab/shequ1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人主页",
+        "iconPath": "images/tab/index2.png",
+        "selectedIconPath": "images/tab/index1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
